@@ -1,0 +1,12 @@
+#Place this file in /etc/logrotate.d/auth-log
+#instead of editing the main /etc/logrotate.conf
+
+/var/log/auth.log {
+        weekly
+        missingok
+        notifempty
+        rotate 7
+        #compress
+        delaycompress
+        notifempty
+}
