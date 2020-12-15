@@ -1,0 +1,34 @@
+---
+- name: Install Damn Vulnerable WebApp Playbook
+  hosts: dvwa
+  become: true
+  tasks:
+
+  - name: Install Docker.io on web vm's
+    apt:
+          name: docker.io
+          update_cache: yes
+          state: present
+
+  - name: Install pip3
+    apt:
+          name: python3-pip
+          state: present
+
+  - name: Install Docker via PIP module
+    pip:
+          name: docker
+          state: present
+
+  - name: Install DVWA inside Docker
+    docker_container:
+          name: dvwa
+          state: started
+          image: cyberxsecurity/dvwa
+          restart_policy: always
+          published_ports: 80:80
+
+  - name: Start docker with SystemD
+    systemd:
+          name: docker
+          enabled: yes

@@ -1,0 +1,42 @@
+---
+- name: Elk Playbook
+  hosts: elk
+  become: true
+  tasks:
+
+  - name: Install Docker.io on web vm's
+    apt:
+          name: docker.io
+          update_cache: yes
+          state: present
+
+  - name: Install pip3
+    apt:
+          name: python3-pip
+          state: present
+
+  - name: Install Docker via PIP module
+    pip:
+          name: docker
+          state: present
+
+  - ansible.posix.sysctl:
+              name: vm.max_map_count
+              value: '262144'
+              state: present
+
+  - name: Install Elk-Stack inside Docker
+    docker_container:
+          name: elk-stack
+          state: started
+          image: sebp/elk:761
+          restart_policy: always
+          ports:
+            - "5601:5601"
+            - "9200:9200"
+            - "5044:5044"
+
+  - name: Start docker with SystemD
+    systemd:
+          name: docker
+          enabled: yes
