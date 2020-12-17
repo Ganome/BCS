@@ -4,9 +4,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: (Images/diagram_filename.png)#!#!#!#!#!#!#!#!
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select playbooks found in ./ansible/playbooks may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select playbooks found in "./ansible/playbook/" may be used to install only certain pieces of it, such as Filebeat.
 
-  - Ansible Playbooks located in: ./ansible/playbooks/
+  - Ansible Playbooks located in: ./ansible/playbook/
 
 This document contains the following details:
 - Description of the Topology
@@ -91,7 +91,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- The playbooks are located in "./ansible/playbooks" and it is recommended to copy them to your local machine at "/etc/ansible/playbooks"
+- The playbooks are located in "./ansible/playbook" and it is recommended to copy them to your local machine at "/etc/ansible/playbook"
 - You must update your /etc/ansible/hosts to include a new group [elk].  Inside this group you will add the IP of servers you wish to install ELK service on.  Using these groups you can choose which hosts to execute playbooks on, and therefore customize your network setup.
 - In order to verify your instance of ELK is functional, visit  "http://[ELK-PUBLIC-IP]:5601/app/kibana" and replace "[ELK-PUBLIC-IP]" with the IP of your host.
 
