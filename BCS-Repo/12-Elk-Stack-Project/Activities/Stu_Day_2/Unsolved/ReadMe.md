@@ -226,9 +226,9 @@ Note that there are fewer instructions and setup files provided here. However, t
     - Update and copy the provided [Metricbeat config file](https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat).
     - Run the `metricbeat modules enable docker` command.
     - Run the `metricbeat setup` command.
-    - Run the `metricbeat -e` command.
+    
 
-- Verify that your play works as expected:
+- Verify that your playbook works as expected:
 
    - On the Metricbeat Installation Page in the ELK server GUI, scroll to **Step 5: Module Status** and click **Check Data**.
 
