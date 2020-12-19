@@ -1,3 +1,6 @@
+*** DUE TO THE INHERRENT DANGER OF PUBLICALLY POSTING MY IP ADDRESS, I WILL REFER TO MY IP IN THIS DOCUMENT AS [MYIP] ***
+
+
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -44,27 +47,30 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: NOT LISTING MY IP PUBLICALLY!!!!
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: [MYIP]
 
-Machines within the network can only be accessed by Ansible Container from JunmpBox.
-- The ELK machine, or Kibana GUI can only be accessed by my IP and computers on my LAN.  I will not list my Public IP.
+Machines within the network can only be accessed by the  Ansible Container from within the JumpBox VM.
+- The ELK machine, or Kibana GUI can only be accessed by [MYIP] and VM's on the Virtual Network's 10.0.0.0/24 and 10.1.0.0/24
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | MY PUBLIC IP         |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box |       Yes           | [MYIP]               |
+| Web-1    |       No            | 10.0.0.4             |
+| web-2    |       No            | 10.0.0.4             |
+| web-3    |       No            | 10.0.0.4             |
+| elk-vm   | SSH-No /  HTTP-Yes  | 10.0.0.4 / [MYIP]    |
+*The elk-vm SSH access is restricted to virtual network traffic.  As the Kibana front-end can only be accessed by my public IP.
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because this ansible-playbook can be used to re-deploy the same working environment in case of any emergencies/disasters.  It also makes new servers on the network simple to setup.
 
 The playbook implements the following tasks:
-- Elk can be installed in 6 painless steps, starting by downloading and installing Docker.
+- Elk can be installed in 5 painless steps, starting by downloading and installing Docker.
 - Secondly you would want to install python-pip3 and the "pip" docker module.
-- You must also increase the size of the vm.max_map_count variable to '262144'
+- You must also increase the size of the vm.max_map_count variable to '262144' #sysctl -w vm.max_map_count=262144
 - Install ELK inside a docker container.
 - Ensure that docker and ELK start with system boot-up process.
 
@@ -76,27 +82,29 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1 `0.0.0.5
+- Web-2 `0.0.0.6
+- Web-3 10.0.0.8
 
-We have installed the following Beats on these machines:
+I have installed the following Beats on these machines:
   - Web-1: Filebeat, Metricbeat
   - Web-2: Filebeat, Metricbeat
   - Web-3: Filebeat, Metricbeat
 
-These Beats allow us to collect the following information from each machine:
-- _TODO: Filebeat monitors the system for local file system changes, While metricbeat logs CPU/RAM/Docker utilization. We can use metricbeat logs to ensure our server is never to burdened or over-worked.  This will make sure the end user has the best experience.
+These Beats allow me to collect the following information from each machine:
+- Filebeat monitors the system for local file system changes, While metricbeat logs CPU/RAM utilization. We can use metricbeat logs to ensure our server is never to burdened or over-worked.  This will make sure the end-user has the best experience.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy theansible-config.yml file to /etc/ansible/ansible.yml
-- Update the /etc/ansible/hosts file to the group we want to install packages on.
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Edit the /etc/asnible/ansible.cfg line remote_user=USERNAME to reflect the remote account being used to execute playbooks.
+- Update the /etc/ansible/hosts file to the group(s) we want to install packages on.
+- Run the playbook, and navigate to the remote host(s) to check that the installation worked as expected.
 
 
 - The playbooks are located in "./ansible/playbook" and it is recommended to copy them to your local machine at "/etc/ansible/playbook"
-- You must update your /etc/ansible/hosts to include a new group [elk].  Inside this group you will add the IP of servers you wish to install ELK service on.  Using these groups you can choose which hosts to execute playbooks on, and therefore customize your network setup.
+- You must update your /etc/ansible/hosts to include a new group [elk] and [dvwa] for these particular PlayBooks.  Inside these groups you will add the IPs of servers you wish to install services on.  Using these groups you can choose which hosts to execute playbooks on, and therefore customize your network setup.
 - In order to verify your instance of ELK is functional, visit  "http://[ELK-PUBLIC-IP]:5601/app/kibana" and replace "[ELK-PUBLIC-IP]" with the IP of your host.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._

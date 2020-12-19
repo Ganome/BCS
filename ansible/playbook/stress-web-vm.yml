@@ -1,0 +1,14 @@
+---
+- name: Stress the Web-VM's CPU
+  hosts: dvwa
+  become: true
+  tasks:
+    
+  - name: Install the stress package
+    apt:
+      name: stress
+      state: present
+      update_cache: yes
+
+  - name: STRESS CPU **WARNING** [CTRL]+C required to exit!!
+    command: stress --cpu 1
