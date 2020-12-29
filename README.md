@@ -44,7 +44,11 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 
-The only machines on the internal network that are exposed to the public Internet are the Jump-Box `port 22`, Load-Balancer `port 80`, and Elk instance `port 5601`  
+The only machines on the internal network that are exposed to the public Internet are:
+ - Jump-Box `port 22`
+ - Load-Balancer `port 80`
+ - Elk instance `port 5601`  
+ 
 All are protected by the Azure Network Security Group `NSG`, allowing only [MYIP] access.
 
 SSH Connections from the internet are only allowed into the Jump-Box machine. Access to this machine is only allowed from the following IP addresses: [MYIP].
