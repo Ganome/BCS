@@ -5,7 +5,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](Images/Azure-elk-Deployment.png)
+![Azure Elk Deployment](Images/Azure-elk-Deployment.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select playbooks found in "./ansible/playbook/" may be used to install only certain pieces of it, such as Filebeat.
 
@@ -32,20 +32,19 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - The metricbeat "Beat" allowsan administrator to keep track of CPU/RAM usage, Network utilization, among others. 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function   | IP Address | Operating System |
-|----------|------------|------------|------------------|
-| Jump Box |Gateway     | 10.0.0.4   | Linux            |
-| Web-1    |WebServer   | 10.0.0.5   | Linux            |
-| Web-2    |WebServer   | 10.0.0.5   | Linux            |
-| Web-3    |WebServer   | 10.0.0.5   | Linux            |
-| Elk      |Kibana-Host | 10.1.0.4   | Linux            |
-| Load-Bal |LoadBalancer| 0.0.0.0    | N/A              |
+| Name     | Function   | IP Address    | Operating System |
+|----------|------------|---------------|------------------|
+| Jump-Box |Gateway     | 10.0.0.4      | Linux            |
+| Web-1    |WebServer   | 10.0.0.5      | Linux            |
+| Web-2    |WebServer   | 10.0.0.5      | Linux            |
+| Web-3    |WebServer   | 10.0.0.5      | Linux            |
+| Elk      |Kibana-Host | 10.1.0.4      | Linux            |
+| Load-Bal |LoadBalancer| 52.143.126.26 | N/A              |
 
 ### Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The only machines on the internal network that are exposed to the public Internet are the Jump-Box and the Load-Balancer.  Both are protected by the Azure Network Security Group `NSG`
 
 Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: [MYIP]
 
@@ -78,7 +77,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![](Images/docker-ps.png)
+![Successful Elk Deployment](Images/docker-ps.png)
 ***PLEASE note that ports 5044, 5601, 9200 Have all been forwarded from the container to the host machine***
 
 ### Target Machines & Beats
