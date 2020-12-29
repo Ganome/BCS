@@ -48,13 +48,14 @@ The only machines on the internal network that are exposed to the public Interne
  - Jump-Box `port 22`
  - Load-Balancer `port 80`
  - Elk instance `port 5601`  
- 
+
 All are protected by the Azure Network Security Group `NSG`, allowing only [MYIP] access.
 
-SSH Connections from the internet are only allowed into the Jump-Box machine. Access to this machine is only allowed from the following IP addresses: [MYIP].
+SSH Connections from the internet are only allowed into the Jump-Box machine. Access to this machine is only allowed from [MYIP].
 
-Machines within the network can only be accessed by the  Ansible Container from within the Jump-Box VM.
-- The ELK machine, or Kibana GUI can only be accessed by [MYIP] and VM's on the Virtual Network's 10.0.0.0/24 and 10.1.0.0/24
+SSH access to Web-1, Web-2, Web-3 and Elk-VM is only allowed from the Ansible Container located within the Jump-Box VM Docker containter.
+
+The ELK machine, or Kibana GUI can only be accessed by [MYIP] and VM's on the Virtual Network's 10.0.0.0/24 and 10.1.0.0/24
 
 A summary of the access policies in place can be found in the table below.
 
@@ -64,7 +65,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    |       No            | 10.0.0.4             |
 | web-2    |       No            | 10.0.0.4             |
 | web-3    |       No            | 10.0.0.4             |
-| elk-vm   | SSH-No /  HTTP-Yes  | 10.0.0.4 / [MYIP]    |
+| Elk-VM   | SSH-No /  HTTP-Yes  | 10.0.0.4 / [MYIP]    |
 
 *The elk-vm SSH access is restricted to virtual network traffic.  As the Kibana front-end can only be accessed by my public IP.
 
