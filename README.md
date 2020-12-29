@@ -53,7 +53,7 @@ All are protected by the Azure Network Security Group `NSG`, allowing only [MYIP
 
 SSH Connections from the internet are only allowed into the Jump-Box machine. Access to this machine is only allowed from [MYIP].
 
-SSH access to Web-1, Web-2, Web-3 and Elk-VM is only allowed from the Ansible Container located within the Jump-Box VM Docker containter.
+SSH access to Web-1, Web-2, Web-3 and Elk-VM is only allowed from the Ansible instance located within the Jump-Box VM Docker containter.
 
 The ELK machine, or Kibana GUI can only be accessed by [MYIP] and VM's on the Virtual Network's 10.0.0.0/24 and 10.1.0.0/24
 
