@@ -108,6 +108,6 @@ SSH into the control node and follow the steps below:
 - You must update your /etc/ansible/hosts to include a new group [elk] and [dvwa] for these particular PlayBooks.  Inside these groups you will add the IPs of servers you wish to install services on.  Using these groups you can choose which hosts to execute playbooks on, and therefore customize your network setup.
 - In order to verify your instance of ELK is functional, visit  "http://[ELK-PUBLIC-IP]:5601/app/kibana" and replace "[ELK-PUBLIC-IP]" with the IP of your host.
 
- ***COMING SOON*** Downlaodable Script that will deploy all playbooks on any machine.
+ ***COMING SOON*** Downloadable Script that will deploy all playbooks on any machine.
 
  To download the ELK playbook specifically; you can run the command "curl -H 'Accept: application/vnd.github.v3.raw' https://raw.githubusercontent.com/Ganome/BCS/main/ansible/playbook/install-elk.yml > /etc/ansible/playbook/install-elk.yml" 
