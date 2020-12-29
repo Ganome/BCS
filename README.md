@@ -5,7 +5,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](Images/azure-deployment.png)
+![](Images/Azure-elk-deployment.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select playbooks found in "./ansible/playbook/" may be used to install only certain pieces of it, such as Filebeat.
 
@@ -61,6 +61,7 @@ A summary of the access policies in place can be found in the table below.
 | web-2    |       No            | 10.0.0.4             |
 | web-3    |       No            | 10.0.0.4             |
 | elk-vm   | SSH-No /  HTTP-Yes  | 10.0.0.4 / [MYIP]    |
+
 *The elk-vm SSH access is restricted to virtual network traffic.  As the Kibana front-end can only be accessed by my public IP.
 
 ### Elk Configuration
@@ -82,8 +83,8 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- Web-1 `0.0.0.5
-- Web-2 `0.0.0.6
+- Web-1 10.0.0.5
+- Web-2 10.0.0.6
 - Web-3 10.0.0.8
 
 I have installed the following Beats on these machines:
@@ -107,5 +108,6 @@ SSH into the control node and follow the steps below:
 - You must update your /etc/ansible/hosts to include a new group [elk] and [dvwa] for these particular PlayBooks.  Inside these groups you will add the IPs of servers you wish to install services on.  Using these groups you can choose which hosts to execute playbooks on, and therefore customize your network setup.
 - In order to verify your instance of ELK is functional, visit  "http://[ELK-PUBLIC-IP]:5601/app/kibana" and replace "[ELK-PUBLIC-IP]" with the IP of your host.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+ ***COMING SOON*** Downlaodable Script that will deploy all playbooks on any machine.
+
  To download the ELK playbook specifically; you can run the command "curl -H 'Accept: application/vnd.github.v3.raw' https://raw.githubusercontent.com/Ganome/BCS/main/ansible/playbook/install-elk.yml > /etc/ansible/playbook/install-elk.yml" 
