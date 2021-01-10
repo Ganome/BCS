@@ -1,0 +1,3 @@
+3b75cdd826a16f5bba0076690f644dc7
+
+#hashcat -a0 -m0 Riddle5.md5 /usr/share/wordlists/rockyou.txt  --force
