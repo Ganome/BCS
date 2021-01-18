@@ -1,0 +1,58 @@
+
+
+
+
+Sessions and Cookies:
+
+15: Which response header sends a cookie to the client?
+	Set-Cookie: cart=Bob
+
+16: Which request header will continue the client's session?
+	Cookie: cart=Bob
+
+		EXAMPLE HTTP REQUESTS AND RESPONSES
+
+17: What is the request method?
+	POST - they're trying to login with credentials Barbara/password
+18: Which header expresses the client's preference for an encrypted response?
+	Upgrade-Insecure-Requests: 1
+19: Does the request have a user session associated with it?
+	Obviously???  A client cant talk to a server with an active session.
+20: What kind of data is being sent from this request body?
+	Login Credentials Barbara/password
+21: What is the response status code?
+	200 OK! - It loaded the web page
+22: What web server is handling this HTTP response?
+	Apache
+23: Does this response have a user session associated to it?
+	Only on days that end in "Y" SessionID=5
+24: What kind of content is likely to be in the [page content] response body?
+	HTML tags?!?!
+25: If your class covered security headers, what security request headers have been included?
+	I don't think we covered most of this in class.
+
+
+		MONOLITHS AND MICROSERVICES
+26: What are the individual components of microservices called?
+	Front-End Server, Back-End Server, Database
+27: What is a service that writes to a database and communicates to other services?
+	Back-End Server
+28: What type of underlying technology allows for microservices to become scalable and have redundancy?
+	Containerization (Docker)
+
+		DEPLOYING AND TESTING A CONTAINER SET
+29: What tool can be used to deploy multiple containers at once?
+	Docker can support multiple containers, and Ansible can launch multiple Docker instances at once.
+30: What kind of file format is required for us to deploy a container set?
+	YML - Ansible Playbook
+
+		DATABASES
+31: Which type of SQL query would we use to see all of the information within a table called customers?
+	SELECT * FROM customers
+32: Which type of SQL query would we use to enter new data into a table? You don't need a full query, just the first part of the statement.)
+	INSERT INTO customers (firstname, lastname) VALUES ('Ross','Dole')
+33: Why would we never run DELETE FROM <table-name>; by itself?
+	It would erase the ENTIRE table!
+
+
+		BONUS CHALLENGE OVERVIEW: COOKIE JAR
