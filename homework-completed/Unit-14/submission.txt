@@ -1,8 +1,45 @@
 
 
+		HTTP REQUESTS AND RESPONSES
+1: What type of architecture does the HTTP request and response process occur in?
+	Web client-server baesd architecture.   14.1 Student Guide, althought it just mentioned this.  Never really defined what it means.
+2: What are the different parts of an HTTP request?
+	Request Line, Headers, and the Request Body (optional)
+3: Which part of an HTTP request is optional?
+	the Request body, as previously stated
+4: What are the three parts of an HTTP response?
+	The response, the Headers, and the response body
+5: Which number class of status codes represents errors?
+	400~
+6: What are the two most common request methods that a security professional will encounter?
+	This question is vague, but I think you want to hear: GET, POST
+7: Which type of HTTP request method is used for sending data?
+	POST
+8: Which part of an HTTP request contains the data being sent to the server?
+	Request Body
+9: In which part of an HTTP response does the browser receive the web code to generate and style a web page?
+	I can only assume in the Headers.  I don't think we covered this in any kind of detail.
+
+		USING CURL
+10: What are the advantages of using curl over the browser?
+	Curl can view the HTML source of a page, Without loading all the javascript junk.  Allowing you view what might happen when you load the page in a browser.
+11: Which curl option is used to change the request method?
+	-X #Ie. curl -X POST -d "sample string" https:/samplewebpage.com  -----Would POST sample string to samplewebpage
+12: Which curl option is used to set request headers?
+	-X
+13: Which curl option is used to view the response header?
+	-I	
+14: Which request method might an attacker use to figure out which HTTP requests an HTTP server will accept?
+	OPTIONS #I know the flag, just NO IDEA HOW TO USE IT!!!!
 
 
-Sessions and Cookies:
+
+
+
+
+
+
+		SESSIONS AND COOKIES:
 
 15: Which response header sends a cookie to the client?
 	Set-Cookie: cart=Bob
