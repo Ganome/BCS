@@ -32,13 +32,6 @@
 14: Which request method might an attacker use to figure out which HTTP requests an HTTP server will accept?
 	OPTIONS #I know the flag, just NO IDEA HOW TO USE IT!!!!
 
-
-
-
-
-
-
-
 		SESSIONS AND COOKIES:
 
 15: Which response header sends a cookie to the client?
