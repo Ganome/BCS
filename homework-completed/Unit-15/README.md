@@ -206,7 +206,7 @@ Your first mission is to break the authentication scheme. There are a number of 
 - **Hint #3**: You can appened `source?source=true` to the URL to read the source code. 
 
 Please include a screenshot here of the hidden JavaScript:
-![Challenge 1](homework-completed/Unit-15/challenge-1.png)
+![Challenge 1](challenge-1.png)
 
 After completing the first challenge, you will be provided with an option to continue to the next challenge.
 
@@ -229,7 +229,7 @@ Your final act is to deface the website using command injection. Follow the walk
 
 - After completing the second challenge, you will be provided with an option to continue to the next challenge.
 
-   ![cracked credit cards](homework-completed/Unit-15/challenge-2.png)
+   ![cracked credit cards](challenge-2.png)
 
 - There should be two webpages at the bottom of the window. The one on top is the original, and the one on the bottom is the defaced webpage.
 
@@ -297,6 +297,6 @@ Your final act is to deface the website using command injection. Follow the walk
     * **and** echo `You've been hacked by...` followed by your name, to the `webgoat_challenge_guest.jsp` file.
     
 Please include a screenshot of the defaced website. 
-![Defaced Website](homework-completed/Unit-15/challenge-3.png)
+![Defaced Website](challenge-3.png)
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
