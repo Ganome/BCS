@@ -47,7 +47,7 @@
 18: Which header expresses the client's preference for an encrypted response?
 	Upgrade-Insecure-Requests: 1
 19: Does the request have a user session associated with it?
-	Obviously???  A client cant talk to a server with an active session.
+	Yes
 20: What kind of data is being sent from this request body?
 	Login Credentials Barbara/password
 21: What is the response status code?
