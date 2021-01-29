@@ -179,33 +179,6 @@ ____
 In this activity, you will assume the role of a pen tester hired by a bank to test the security of the bank’s authentication scheme, sensitive financial data, and website interface.
 
 
-#### Lab Environment   
-
-We'll use the **Web Vulns** lab environment. To access it: 
-  - Log in to the Azure Classroom Labs dashboard. 
-  - Find the card with the title **Web Vulns** or **Web Vulnerability and Hardening**.
-  - Click the monitor icon in the bottom-right. 
-  - Select **Connect with RDP**.
-  - Use Credentials (azadmin:p4ssw0rd*)
-
-- The lab should already be started, so you should be able to connect immediately. 
-
-- Refer to the [lab setup instructions](https://cyberxsecurity.gitlab.io/documentation/using-classroom-labs/post/2019-01-09-first-access/) for details on setting up the RDP connection.
-
-Once the lab environment is running, open the HyperV manager and make sure that the OWASPBWA and Kali box is running.
-
-- Then, login to the Kali VM and navigate to the IP address of the OWASPBWA machine.
-
-- Click the option for 'WebGoat' and start the WebGoat app.
-
-- Use the credentials: `guest`:`guest`
-
-On the bottom of the left side of the screen, click on `Challenge` and then choose `The Challenge`.
-
-**Note:** A common issue with this lab is the Challange activity failing to start successfully. Hit the `Restart the Lesson` button in the top right if you get an error starting the activity.
-
-### The Challenge Instructions
-
 #### Challenge #1
 
 ![Challenge 1](challenge-1.png)
@@ -220,70 +193,32 @@ On the bottom of the left side of the screen, click on `Challenge` and then choo
 
 - There should be two webpages at the bottom of the window. The one on top is the original, and the one on the bottom is the defaced webpage.
 
-   ![original webpage](Images/original_defaced.png)
+   ![original webpage](challenge-3-original.png)
 
 - Start Foxy Proxy (WebScarab) to send all GET/POST requests from Firefox to the WebScarab proxy intercept.
 
-   ![Foxy Proxy](Images/foxy_proxy_scab.png)
+   ![Foxy Proxy](challenge-3-foxy.png)
 
 - Click **TCP** and then the **View Network** button and send the request to WebScarab.
-
-   ![View Network](Images/view_network_tcp.png)
-
-- The WebScarab window will open. 
-
-   - In the **URL Encoded** tab, find the **File** and **Value** form fields. 
-   - This is where you will perform your command injection.
+- The WebScarab window will open.
    
-    ![File Field](Images/webscarab_file_value_field.png)
 
 - Next, perform a test and see if this shell is vulnerable to command injection. 
 
-   - Type the following command into the Value field: `tcp && whoami && pwd`.
+   ![View Network](challenge-3-command-injection.png)
    
-       - **Note:** Windows users can type `tcp && dir`. `dir` will return the directory as proof of vulnerability.
-   
-   - Click **Accept Changes**.
-   
-     ![whoami](Images/whoami_pwd_image.png)
-   
-   - On the next window, click **Accept Changes** twice.
-   
-     ![accept](Images/webscarab_2nd_window.png)
- 
-- Scroll to the bottom of the **Current Network Status** window and observe the results for both of the `whoami` and `pwd` commands.
+   - Next, we'll locate the `webgoat_challenge_guest.jsp` file. 
 
-    ![whoami & pwd](Images/whoami_pwd.png)
-
-   - The results show that we are the root user and our current working directory is `/var/lib/tomcat6`.
-
-   - This verifies the vulnerability, so proceed to the next step.
-
-- Next, we'll locate the `webgoat_challenge_guest.jsp` file. 
-
-   - Type the following command: `tcp && cd / && find . -iname webgoat_challenge_guest.jsp`.
-   
-      - **Note**: Windows users will need to type: `tcp && dir /s 'webgoat_challenge_guest.jsp'`
-   
-   ![find command](Images/webscarab_find_command.png)
+   ![find command](challenge-3-find-guest-page.png)
    
    - The absolute path is: `./owaspbwa/owaspbwa-svn/var/lib/tomcat6/webapps/WebGoat/webgoat_challenge_guest.jsp`.
    
-   ![absolute path](Images/webscarab_abolute_path.png)
+   ![absolute path](challenge-3-absolute-path.png)
    
    - Remember, our present working directory is `/var/lib/tomcat6`. Therefore, the relative path is `webapps/WebGoat/webgoat_challenge_guest.jsp`.
    
-**Now it's your turn**   
+Completed Challenge:
 
-- Now that we know where the webpage is, your task will be to deface the website. Keep in mind the following:
-  * Use **WebScarab** to perform command injection.
-  * When performing command injection, you will need to select a field that WebScarab can return commands to. These fields are typically located in a drop down. 
-  * You will also need to locate and edit the the webpage's source code: `webgoat_challenge_guest.jsp`
-  * Your final command will:
-    * Change to the location of the `webgoat_challenge_guest.jsp` file.
-    * **and** echo `You've been hacked by...` followed by your name, to the `webgoat_challenge_guest.jsp` file.
-    
-Please include a screenshot of the defaced website. 
 ![Defaced Website](challenge-3.png)
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
