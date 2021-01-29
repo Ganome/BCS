@@ -185,7 +185,7 @@ In this activity, you will assume the role of a pen tester hired by a bank to te
 
 #### Challenge #2
    - First you must use TamperData to change the form fields
-![TamperData][Challenge-2-tamper.png)
+![TamperData](Challenge-2-tamper.png)
    - Which provides a list of everyone's info.
 ![cracked credit cards](challenge-2.png)
 
