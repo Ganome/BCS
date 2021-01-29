@@ -217,7 +217,7 @@ In this activity, you will assume the role of a pen tester hired by a bank to te
    
    ![absolute path](challenge-3-absolute-path.png)
    
-   - Remember, our present working directory is `/var/lib/tomcat6`. Therefore, the relative path is `webapps/WebGoat/webgoat_challenge_guest.jsp`.
+   - Since our Present Working Directory (pwd) is `/var/lib/tomcat6`, we can use the Relative path `webapps/WebGoat/webgoat_challenge_guest.jsp` when copying over the defaced website.
    
 Completed Challenge:
    - After the defacing
