@@ -193,7 +193,7 @@ In this activity, you will assume the role of a pen tester hired by a bank to te
 #### Challenge #3
 
 
-- There should be two webpages at the bottom of the window. The one on top is the original, and the one on the bottom is the defaced webpage.
+- There should be two webpages at the bottom of the window. The one on top is the original, and the one on the bottom will be the defaced webpage.  This is a screenshot before defacing.
 
    ![original webpage](challenge-3-original.png)
 
@@ -220,6 +220,7 @@ In this activity, you will assume the role of a pen tester hired by a bank to te
    - Remember, our present working directory is `/var/lib/tomcat6`. Therefore, the relative path is `webapps/WebGoat/webgoat_challenge_guest.jsp`.
    
 Completed Challenge:
+   - After the defacing
 
 ![Defaced Website](challenge-3.png)
 ---
