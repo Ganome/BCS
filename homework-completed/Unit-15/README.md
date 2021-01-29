@@ -199,7 +199,7 @@ In this activity, you will assume the role of a pen tester hired by a bank to te
 
 - Start Foxy Proxy (WebScarab) to send all GET/POST requests from Firefox to the WebScarab proxy intercept.
 
-   ![Foxy Proxy](challenge-3-foxy.png)
+   ![Foxy Proxy](challenge-3-foxy-proxy.png)
 
 - Click **TCP** and then the **View Network** button and send the request to WebScarab.
 - The WebScarab window will open.
