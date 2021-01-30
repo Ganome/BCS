@@ -20,15 +20,15 @@ Answer: The ?item=price#1999 could be exploited by changing the price of the ite
 
 2. Which part of the URL can be manipulated by an attacker to cause a vulnerable web server to dump the `/etc/passwd` file? Also, name the attack used to exploit this vulnerability.
 
-TODO: Answer:
-   
+Answer: Using directory transversal in the Path. Ie. "www.buyitnow.tv/../../../../../../../../../etc/passwd" should print the passwd file to the browser window
+    
 3. Name three threat agents that can pose a risk to your organization.
 
-TODO: Answer:
+Answer: Form tampering, SQL Injection, and non-sanitized input
 
 4. What kinds of sources can act as an attack vector for injection attacks?
 
-TODO: Answer: HTML, SQL Databases,
+Answer: HTML Paramaters, SQL Databases, Form Tampering
 
 5. Injection attacks exploit which part of the CIA triad?
 
@@ -128,7 +128,7 @@ Answer: Layer 7 - because HTTP traffic is Layer 7
 
 2. A WAF helps protect web applications by filtering and monitoring what?
 
-TODO: Answer: HTTP Traffic?
+Answer: HTTP Traffic?
 
 
 3. True or False: A WAF based on the negative security model (Blacklisting) protects against known attacks, and a WAF based on the positive security model (Whitelisting) allows pre-approved traffic to pass.
