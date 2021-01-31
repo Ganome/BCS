@@ -28,8 +28,8 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
  Answer: 65.61.137.64 - 65.61.137.127 OR 65.61.137.64/26
 
 
-  3. What is the company they use to store their infrastructure
-:
+  3. What is the company they use to store their infrastructure:
+
  Answer:www.rackspace.com
 
 
@@ -47,7 +47,7 @@ Answer: Ports 80, 443, 8080.  These are Apache servers.
 
 
 
--#### Step 4: Recon-ng
+- #### Step 4: Recon-ng
 
 Is Altoro Mutual vulnerable to XSS:
 
@@ -56,7 +56,7 @@ Is Altoro Mutual vulnerable to XSS:
 
 
 
--### Step 5: Zenmap
+- ### Step 5: Zenmap
 
 Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
 
@@ -89,8 +89,4 @@ Your client has asked that you help identify any vulnerabilities with their file
   3. What mitigation strategies can you recommendations for the client to protect their server:
 
  Answer: This particular exploit is almost a decade old, update already!
-
-
----
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
 
