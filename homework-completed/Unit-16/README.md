@@ -3,11 +3,11 @@
 #### Step 1: Google Dorking
 
 
-- Using Google, can you identify who the Chief Executive Officer of Altoro Mutual is:
- Answer: insite:altoromutual.com Chief Executive Officer - Karl Fitsgerald
+Using Google, can you identify who the Chief Executive Officer of Altoro Mutual is:
+	Answer: insite:altoromutual.com Chief Executive Officer - Karl Fitsgerald
 
-- How can this information be helpful to an attacker:
- Answer: They can use a whaling technique to phish for the CEO.  Or pretend to be the CEO and send out false emails.
+How can this information be helpful to an attacker:
+	Answer: They can use a whaling technique to phish for the CEO.  Or pretend to be the CEO and send out false emails.
 
 
 #### Step 2: DNS and Domain Discovery
