@@ -78,15 +78,15 @@ Your client has asked that you help identify any vulnerabilities with their file
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability:
 
- Answer: vsftpd - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+ Answer: SMB 3.5 Remote Code Execution - https://nvd.nist.gov/vuln/detail/CVE-2017-7494
 
 
   2. Why is it dangerous:
 
- Answer: It allows a hacker to open a back door into the remote system, and after that remote shell.
+ Answer: It allows an attacker to upload a small file which is then  ran by the server.  This opens a backdoor for the attacker and they then have full access to the machine.
 
 
   3. What mitigation strategies can you recommendations for the client to protect their server:
 
- Answer: This particular exploit is almost a decade old, update already!
+ Answer: Update to the newest version of Samba.
 
