@@ -44,7 +44,7 @@ STEP 1: THE NEED FOR SPEED
 
  2: The brute force attack likely started on the 21 Feb, 2020 @ 09:00:00
 
- ![Start of BruteForce](start-brute-force.png)
+ ![Start of BruteForce](brute-force-start.png)
 
  3:  I feel the average failed login attempts are somewhere in the mid 20's.  So a thresh-hold somewhere in the range of 25-30 would be acceptable.
 
