@@ -23,7 +23,7 @@ STEP 1: THE NEED FOR SPEED
 
  1:
 
- ![]
+ ![](splunk-upload-nessus.png)
 
  2:
 
@@ -40,7 +40,7 @@ STEP 1: THE NEED FOR SPEED
 
  1:
 
- ![Upload BruteForce Data]
+ ![Upload BruteForce Data](splunk-upload-admin-logs.png)
 
  2: The brute force attack likely started on the 21 Feb, 2020 @ 09:00:00
 
