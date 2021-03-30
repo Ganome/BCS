@@ -1,1 +1,1 @@
-![](Final-Presentation.pdf)
+<embed src="Final-Presentation.pdf" type="application/pdf" height="1024" width="768">
