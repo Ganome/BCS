@@ -1,5 +1,0 @@
-1. sudo journalctl -o cat -p 3
-2. sudo journalctl --disk-usage #this command prints the usage for the ENTIRE log not just the current log
-3. sudo journalctl --vacuum-time=2d
-4. sudo journalctl -p 0 > /home/student/Priority_High.txt && sudo journalctl -p 2 >> /home/student/Priority_High.txt
-5. see USER,crontab OR "@daily sudo journalctl -p 0 > /home/student/Priority_High.txt && sudo journalctl -p 2 > /home/student/Priority_High.txt"

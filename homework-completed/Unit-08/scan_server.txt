@@ -1,8 +1,0 @@
-# Nmap 7.60 scan initiated Sun Nov 15 11:11:13 2020 as: nmap -sS -iL alive_servers.txt -oN scan_server.txt
-Nmap scan report for 167.172.144.11
-Host is up (0.0062s latency).
-Not shown: 999 filtered ports
-PORT   STATE SERVICE
-22/tcp open  ssh
-
-# Nmap done at Sun Nov 15 11:11:30 2020 -- 1 IP address (1 host up) scanned in 17.04 seconds
